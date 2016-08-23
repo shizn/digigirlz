@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+    <CommandSet xml:lang="zh-cn" Name="Swith_zh-cn">
+        <AppName> 开关 </AppName>
+        <Example> 使用开关来打开灯泡 </Example>
+
+        <Command Name="switch">
+            <Example> 使用开关来打开灯 </Example>
+            <ListenFor RequireAppName="ExplicitlySpecified"> 使用 {builtin:AppName} 来 {status} 灯泡 </ListenFor>
+            <Feedback> {status} 灯泡 </Feedback>
+            <Navigate Target="placeholder"/>
+        </Command>
+    
+        <PhraseList Label="status">
+            <Item>打开</Item>
+            <Item>关闭</Item>
+        </PhraseList>
+    </CommandSet>
+</VoiceCommands>
